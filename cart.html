@@ -18,6 +18,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-firestore.js"></script>
   
 </head>
 <body background="pexels-kyla-rose-rockola-954677.jpg">
@@ -68,5 +72,68 @@
   </footer>
 
   <script src="cart.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-firestore.js"></script>
+    <script src="your-firebase-config.js"></script>
+    
+
+    <script>
+      function toast() {
+        var x = document.getElementById("snackbar");
+        x.className = "show";
+        setTimeout(function () {
+          x.className = x.className.replace("show", "");
+        }, 3000);
+      }
+    
+      const firebaseConfig = {
+  apiKey: "AIzaSyDChHFeuLE82RhAavT9p47YP6nB1U9BO20",
+  authDomain: "newbookingpage.firebaseapp.com",
+  databaseURL: "https://newbookingpage-default-rtdb.firebaseio.com",
+  projectId: "newbookingpage",
+  storageBucket: "newbookingpage.appspot.com",
+  messagingSenderId: "967182319638",
+  appId: "1:967182319638:web:3efb98c1f3b850de2eb537"
+};
+    
+      document.addEventListener("DOMContentLoaded", function() {
+        const orderNowButton = document.getElementById('order-now-btn');
+        orderNowButton.addEventListener('click', async function() {
+          // Retrieve cart items from localStorage
+          const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    
+          // Calculate total order price
+          let totalOrderPrice = cartItems.reduce((total, item) => total + item.price, 0);
+    
+          // Initialize Firebase
+          firebase.initializeApp(firebaseConfig);
+    
+          // Get a reference to the Firestore database service
+          const db = firebase.firestore();
+    
+          // Add cartItems to Firestore
+          try {
+            const docRef = await db.collection("orders").add({
+              items: cartItems,
+              totalOrderPrice: totalOrderPrice,
+              timestamp: firebase.firestore.FieldValue.serverTimestamp()
+            });
+            console.log("Order placed with ID: ", docRef.id);
+    
+            // Clear cartItems from localStorage after placing order
+            localStorage.removeItem('cartItems');
+    
+            // Redirect to menu.html
+            window.location.href = "menu.html";
+    
+            // Show success message
+            alert("Order placed successfully!");
+          } catch (error) {
+            console.error("Error placing order: ", error);
+            alert("An error occurred while placing the order. Please try again.");
+          }
+        });
+      });
+    </script>
 </body>
 </html>
