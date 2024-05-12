@@ -1,0 +1,339 @@
+
+:root {
+
+  /**
+   * COLORS
+   */
+
+  --gold-crayola: hsl(38, 61%, 73%);
+  --quick-silver: hsla(0, 0%, 65%, 1);
+  --davys-grey: hsla(30, 3%, 34%, 1);
+  --smoky-black-1: hsla(40, 12%, 5%, 1);
+  --smoky-black-2: hsla(30, 8%, 5%, 1);
+  --smoky-black-3: hsla(0, 3%, 7%, 1);
+  --eerie-black-1: hsla(210, 4%, 9%, 1);
+  --eerie-black-2: hsla(210, 4%, 11%, 1);
+  --eerie-black-3: hsla(180, 2%, 8%, 1);
+  --eerie-black-4: hsla(0, 0%, 13%, 1);
+  --white: hsla(0, 0%, 100%, 1);
+  --white-alpha-20: hsla(0, 0%, 100%, 0.2);
+  --white-alpha-10: hsla(0, 0%, 100%, 0.1);
+  --black: hsla(0, 0%, 0%, 1);
+  --black-alpha-80: hsla(0, 0%, 0%, 0.8);
+  --black-alpha-15: hsla(0, 0%, 0%, 0.15);
+}
+body{
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
+  padding: 30px 14%;
+  transition:all .50s ease
+}
+.logo{
+  display:flex;
+  align-items: center;
+  color: var(--text-color);
+  font-size: 33px ;
+}
+.logo i{
+  vertical-align: middle;
+  margin-right: 8px;
+  color: var(--main-color); 
+}
+.navlist{
+  display: flex ;
+
+}
+.navlist a{
+  color: var(--text-color);
+  font-size: var(--p-font);
+  font-weight: 600;
+  margin: 0 25px;
+  transition: all .50s ease;
+  
+     
+}
+.navlist a:hover{
+  color: var(--main-color)
+}
+.navlist a:active{
+  color: var(--main-color)
+}
+.nav-icons{
+  display: flex;
+  align-items: center;
+  padding: 8px 15px;
+  background: var(--main-color);
+  border-radius: 3rem;
+  box-shadow: #e7a809 0px 1px 25px;
+}
+.nav-icons i{
+  vertical-align: middle;
+  font-size: 25px;
+  color: var(--bg-color);
+  margin-left: 5px;
+  margin-right: 8px;
+  transition: all .50s ease;
+}
+#menu-icon{
+  font-size: 32px;
+  color: var(--text-color);
+  z-index: 10001;
+  cursor: pointer;
+  display: none;
+}
+.nav-icons i:hover{
+  transform:scale(1.1) ;
+  color: var(--text-color);
+
+}
+.home{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+.home-img img{
+  width: 1700px;
+  height: 1080px;
+
+}
+
+  .container {
+    width: 100%;
+    ;
+  }
+  .menu {
+    padding: 150px 0;
+    /* background-color: rgb(252, 255, 90); */
+    color: #000000;
+  }
+  .menu h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: x-large;
+    text-decoration: underline;
+    color: #fff;
+  }
+  
+  .menu-items {
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    justify-content: space-evenly;
+    column-gap: 50px;
+    row-gap: 50px;
+
+  }
+  .marq { 
+    padding-top: 100px; 
+    padding-bottom: 10px; 
+
+} 
+
+.geek1 { 
+    font-size: 64px; 
+    font-family: "Arial", sans-serif;
+    font-weight: bold; 
+    color: white; 
+    padding-bottom: 10px; 
+} 
+  
+  .item {
+    width: 300px;
+    margin: 0 20px 20px 0;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.795);
+  }
+  
+  
+  
+  .item img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .item h3 {
+    margin-top: 10px;
+  }
+  
+  .item p {
+    margin-top: 10px;
+  }
+  
+  .item span {
+    display: list-item;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  .item:hover{
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    transform: translateY(-0.85em);
+    transition-duration: 0.2s;
+    box-shadow: 0 0 20px rgb(0, 0, 0);
+
+  }
+ 
+  .add-to-cart {
+    display: block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #b32121;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .add-to-cart:hover {
+    background-color: #cf0000;
+    border-radius: 10px ;
+    scroll-margin-inline-end: 10px;
+  }
+  footer {
+    background-color: #67defc;
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px 0;
+  }
+
+  #toastbox {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 20px;
+
+  }
+  .toast {
+    width: 400px;
+    height: 80px;
+    background: #fff;
+    font-weight: 500;
+    margin: 15px 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    position: relative;
+    transform: translateX(100%);
+    animation: moveleft 0.5s linear forwards;
+   }
+   @keyframes moveleft{
+    100%{
+      transform: translateX(0);
+    }
+   }
+  .toast::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background: green;
+    animation: anim 5s linear forwards;
+   
+  }
+   @keyframes anim {
+    100%{
+      width: 0;
+    }
+   }
+   .nav-icons i:hover{
+    transform:scale(1.1) ;
+    color: var(--text-color);
+
+}
+.navlist{
+  display: flex ;
+
+}
+.navlist a{
+  color: var(--text-color);
+  font-size: var(--p-font);
+  font-weight: 600;
+  margin: 0 25px;
+  transition: all .50s ease;
+  
+     
+}
+.navlist a:hover{
+  color: var(--main-color)
+}
+.navlist a:active{
+  color: var(--main-color)
+}
+
+.nav-icons i{
+  vertical-align: middle;
+  font-size: 25px;
+  color: var(--bg-color);
+  margin-left: 5px;
+  margin-right: 8px;
+  transition: all .50s ease;
+}
+
+
+#snackbar {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: #333; /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking</title>
+    <link rel="shortcut icon" href="819458e3-cd22-4574-bdda-36430a89c2b7.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="booking.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css" />
+
+  <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    
+
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-firestore.js"></script>
+  </head>
+  <body background="background.jpeg">
+    <header>
+      <a href="#" class="logo"><i class='bx bxs-home'></i>ESSENCE</a>
+  
+      <ul class="navlist">
+          <li><a href="index.html" >HOME</a></li>
+          <li><a href="menu.html">MENU</a></li>
+          <li><a href="about.html">ABOUT US</a></li>
+          <li><a href="location.html">HOURS & LOCATION</a></li>
+          <li><a href="booking.html"class="active">RESERVATION</a></li>
+      </ul>
+      <div class="nav-icons">
+        <a href="cart.html"><i class="bx bxs-cart bx-tada"></i></a>
+      </div>
+      <div class="bx bx-menu" id="menu-icon"></div>
+  </header>
+
+   
+
+
+    <section class="booking">
+      <div class="container">
+
+        <h2>Make a Booking</h2>
+        <form action="" id="bookingform">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="mobile">Mobile Number:</label>
+            <input type="tel" id="mobile" name="mobile" required />
+          </div>
+          <div class="form-group">
+            <label for="people">Number of People:</label>
+            <input type="number" id="people" name="people" min="1" required />
+          </div>
+          <button onclick="sendData(event)">Submit</button>
+
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Restaurant Name. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+  
+  const firebaseConfig = {
+    // Your Firebase configuration
+  };
+
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  const sendData = async (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const mobile = document.getElementById('mobile').value;
+    const people = document.getElementById('people').value;
+
+    const options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        mobile,
+        people
+      })
+    };
+
+    try {
+      const res = await fetch('https://newbookingpage-default-rtdb.firebaseio.com/UserData.json', options);
+      console.log(res);
+      if (res.ok) {
+        alert("Booking submitted successfully!");
+      } else {
+        alert("An error occurred. Please try again.");
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert("An error occurred. Please try again.");
+    }
+  };
+</script>
+
+
+    </script>
+  </body>
+</html>
