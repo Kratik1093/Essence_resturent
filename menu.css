@@ -167,6 +167,7 @@ header{
     border-radius: 5px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.795);
     height: 420px;
+    transition: .4s ease-in;
   }
   
   
@@ -211,6 +212,7 @@ header{
     border-radius: 5px;
     left: 20px;
     bottom: 10px;
+    transition: .2s ease-in;
     
   }
   

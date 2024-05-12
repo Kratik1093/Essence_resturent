@@ -74,7 +74,7 @@
     display: block;
     width: 100%;
     padding: 10px;
-    background-color:  #0ec5bc;
+    background-color:#e7a809;
     color: #fff;
     border: none;
     border-radius: 10px;
@@ -82,7 +82,7 @@
   }
   
   button:hover {
-    background-color:  #0ddbd1ad;
+    background-color:  #e78709;
     border-radius: 15px;
   }
   
