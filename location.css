@@ -1,5 +1,5 @@
  .hours-location {
-    padding: 180px 0;
+    padding: 150px 0;
     background: url(wallpaperflare.com_wallpaper\ \(49\).jpg)
   }
   
@@ -14,7 +14,7 @@
     align-items: flex-start;
   }
   
-  .hours-location .hours,
+
   .hours-location .location {
     width: 45%;
   }
