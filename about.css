@@ -40,7 +40,7 @@
     transform: translate(-50%, -50%); /* Center the overlay */
     text-align: left;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.301); /* Add a semi-transparent background color */
+    background-color: rgba(255, 255, 255, 0.058); /* Add a semi-transparent background color */
     color: #000000;
     border-radius: 5px;
   }

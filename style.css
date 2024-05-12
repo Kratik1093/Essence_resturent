@@ -19,7 +19,10 @@
 --h2-font: 2.6rem;
 --p-font: 1.1rem;
 }
-
+.nav-list{
+    white-space: nowrap;
+  }
+  
 body{
     background: var(--bg-color);
     color: var(--text-color);
@@ -27,7 +30,7 @@ body{
 
 header{
     position: fixed;
-    width: 100%;
+   width: 100vw;
     top: 0;
     right: 0;
     z-index: 1000;
