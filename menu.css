@@ -160,11 +160,13 @@ header{
   
   .item {
     width: 300px;
-    margin: 0 20px 20px 0;
+   position: relative;
     padding: 20px;
-    background-color: #fff;
+    color:white;
+    background-color: #99969657;
     border-radius: 5px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.795);
+    height: 420px;
   }
   
   
@@ -192,6 +194,8 @@ header{
     transform: translateY(-0.85em);
     transition-duration: 0.2s;
     box-shadow: 0 0 20px rgb(0, 0, 0);
+    background-color: #ffffffbb;
+    color: #000000;
 
   }
  
@@ -199,15 +203,19 @@ header{
     display: block;
     margin-top: 10px;
     padding: 10px 20px;
+  position: absolute;
     border: none;
-    background-color: #e9cc2a;
+    background-color: #e7a809;
     color: #fff;
     cursor: pointer;
     border-radius: 5px;
+    left: 20px;
+    bottom: 10px;
+    
   }
   
   .add-to-cart:hover {
-    background-color: #cf0000;
+    background-color: #e78709;
     border-radius: 10px ;
     scroll-margin-inline-end: 10px;
   }
