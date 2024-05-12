@@ -99,6 +99,9 @@ header{
     color: var(--text-color);
 
 }
+.nav-list .active{
+    color: #e7a809;
+}
 .home{
     position: relative;
     height: 100vh;
@@ -330,4 +333,11 @@ color: whitesmoke;
 .ourcussub{
     text-align: center;
     font-size: 24px;
+}
+.LeftFooter h3{
+    display: flex;
+    gap:10px;
+}
+.linkcolor:hover{
+    color: #e7a809;
 }

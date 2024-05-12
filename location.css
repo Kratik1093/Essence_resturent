@@ -4,7 +4,7 @@
   }
   
   .hours-location h2 {
-    text-align: center;
+    text-align: left;
     margin-bottom: 20px;
   }
   
@@ -13,9 +13,21 @@
     justify-content: space-around;
     align-items: flex-start;
   }
+ 
+  .timings{
+    align-items: center;
+    margin-top: 40px ;
+  
+  }
+  .timings li{
+    font-size: 22px;
+    margin-top: 12px;
+   
+  }
   
   .hours-location .hours,
   .hours-location .location {
+   
     width: 45%;
   }
   
