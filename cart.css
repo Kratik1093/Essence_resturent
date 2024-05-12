@@ -246,3 +246,6 @@
   border-radius: 4px;
   z-index: 999;
 }
+.cart-name{
+  text-transform: capitalize;
+}
