@@ -2,7 +2,9 @@
 .booking {
     padding: 8% 0 0;
     margin: auto;
-    background: url(wallpaperflare.com_wallpaper\ \(49\).jpg)
+    background: url(wallpaperflare.com_wallpaper\ \(49\).jpg);
+    height: 100vh;
+    
   }
   
   .booking h2 {
