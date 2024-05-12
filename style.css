@@ -293,17 +293,21 @@ color: whitesmoke;
 }
 
 .box{
+    position: relative;
     padding: 30px;
     background: whitesmoke;
     border-radius: 3rem;
     color: #212121;
     width: 90%;
-    height:95%;
+    height: 300px;
+
 }
 .in-box{
+    position: absolute;
     display: flex;
     align-items: center;
     gap: 30px;
+    bottom: 0;
 }
 .box-img img{
     width: 100%;
