@@ -1,5 +1,9 @@
 .about {
     padding: 40px 0;
+    
+  }
+  .bgimg{
+    background: url(wallpaperflare.com_wallpaper\ \(49\).jpg);
   }
   
   .about h2 {
@@ -12,6 +16,7 @@
   }
   body{
     background-color: #000000;
+  
   }
   .container {
     width: 80%;
