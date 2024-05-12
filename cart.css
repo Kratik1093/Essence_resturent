@@ -2,6 +2,7 @@
 
 .cart {
     padding: 150px 0;
+    height: 100vh;
     background: url(wallpaperflare.com_wallpaper\ \(49\).jpg)
   }
   
@@ -10,11 +11,7 @@
     margin-bottom: 20px;
   }
   
-  .cart-items {
-    border: 1px solid #ffffff;
-    border-radius: 5px;
-    padding: 80px;
-  }
+ 
   
   .cart-item {
     margin-bottom: 10px;
@@ -157,7 +154,7 @@
   display: grid;
     width: 50%;
     padding: 10px;
-    background-color: #0ec5bc;
+   
     color: #fff;
     border: thick;
     border-radius: 10px;
@@ -165,11 +162,13 @@
     margin-left: 300px;
 }
   
-  footer {
-    background-color: #67defc;
-    color: #fff;
-    text-align: center;
-    margin-top: 30px;
-    padding: 10px 0;
+
+  #order-now-btn{
+    font-size: 16px;
+    padding: 8px 12px;
+    background-color: #e7a809 ;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
   }
-  

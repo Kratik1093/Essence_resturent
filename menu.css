@@ -72,6 +72,13 @@ header{
 .navlist a:hover{
   color: var(--main-color)
 }
+.menu-title{
+  font-size: 48px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
 .navlist a:active{
   color: var(--main-color)
 }
