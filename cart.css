@@ -2,8 +2,10 @@
 
 .cart {
     padding: 150px 0;
-    height: 100vh;
-    background: url(wallpaperflare.com_wallpaper\ \(49\).jpg)
+    min-height: 100vh;
+    height: auto;
+    background: url(wallpaperflare.com_wallpaper\ \(49\).jpg);
+    overflow: hidden;
   }
   
   .cart h2 {
@@ -11,13 +13,16 @@
     margin-bottom: 20px;
   }
   
- 
-  
-  .cart-item {
-    margin-bottom: 10px;
-    border-bottom: 1px solid #f10a0a;
-    padding-bottom: 10px;
+  .empty-cart-message{
+    font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #b70000; /* Choose a color that complements your design */
+  text-align: center;
+  margin-top: 20px; /* Adjust spacing as needed */
   }
+  
+
   
   .cart-item:last-child {
     border-bottom: none;
@@ -28,8 +33,10 @@
   }
   
   .cart-total {
-    margin-top: 20px;
+    margin-top: 30px;
     text-align: right;
+    margin-right: 10%;
+    margin-bottom: 30px;
   }
   
   .container {
@@ -152,14 +159,14 @@
 }
 .cartt{
   display: grid;
-    width: 50%;
+    width: 100%;
     padding: 10px;
    
     color: #fff;
     border: thick;
     border-radius: 10px;
     cursor: pointer;
-    margin-left: 300px;
+
 }
   
 
@@ -169,6 +176,73 @@
     background-color: #e7a809 ;
     color: white;
     border: none;
+    margin: 0 auto;
+ width: 65%;
     border-radius: 5px;
     cursor: pointer;
   }
+  
+  .cart-item {
+    ALIGN-ITEMS: center;
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    justify-content: start;
+    gap: 68px;
+    margin-bottom: 10px;
+    background-color: #ababab1a;
+    border-radius: 5px;
+  }
+  
+  .remove-from-cart {
+    position: absolute;
+    transform: translateY(33%);
+    right: 40px;
+    height: 100%;
+    font-size: 28px;
+    /* top: 50%; */
+    cursor: pointer;
+    color: #e7a809;;
+  }
+  .cart-layout{
+    width:"100%";
+    display:"flex";
+    
+  }
+.quantity-button{
+  color: #e7a809;
+  background: transparent;
+}
+.quantity{
+  display: flex;
+  gap:10px;
+  background-color: #2b2b2ba7;
+  width: max-content;
+  padding: 2px 5px;
+}
+.quantity p,span{
+  font-size: 18px;
+  cursor: pointer;
+}
+.empty-cart-message {
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #888;
+  text-align: center;
+  margin-top: 20px;
+  display: none; /* Initially hide the empty cart message */
+}
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  z-index: 999;
+}
